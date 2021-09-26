@@ -30,6 +30,13 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/array-type': [
+      2,
+      {
+        default: 'generic',
+      },
+    ],
+    '@typescript-eslint/unbound-method': 0,
   },
   parserOptions: {
     project: './tsconfig.json',
