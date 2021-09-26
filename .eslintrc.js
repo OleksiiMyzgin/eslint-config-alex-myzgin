@@ -52,6 +52,7 @@ module.exports = {
         allow: ['resolve', 'reject', 'done', 'next', 'err', 'error'],
       },
     ],
+    'import/extensions': 0,
     'prefer-const': [
       'error',
       {
@@ -72,6 +73,8 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
+    'react/jsx-indent': 0,
+    'react/jsx-one-expression-per-line': 0,
     'jsx-a11y/accessible-emoji': 0,
     'jsx-a11y/label-has-associated-control': [
       'error',
@@ -89,9 +92,10 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        trailingComma: 'es5',
-        singleQuote: true,
+        trailingComma: 'all',
         printWidth: 80,
+        tabWidth: 2,
+        singleQuote: true,
         // below line only for windows users facing CLRF and eslint/prettier error
         // non windows users feel free to delete it
         endOfLine: 'auto',
@@ -108,5 +112,14 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/comma-dangle': ['off'],
+    // note you must disable the base rule as it can report incorrect errors
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      2,
+      {
+        classes: false,
+        functions: false,
+      },
+    ],
   },
 };
