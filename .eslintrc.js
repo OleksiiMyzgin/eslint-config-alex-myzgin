@@ -121,5 +121,6 @@ module.exports = {
         functions: false,
       },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
 };
