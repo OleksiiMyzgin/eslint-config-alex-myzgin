@@ -37,6 +37,16 @@ module.exports = {
       },
     ],
     '@typescript-eslint/unbound-method': 0,
+    // note you must disable the base rule as it can report incorrect errors
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      2,
+      {
+        classes: false,
+        functions: false,
+      },
+    ],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
   parserOptions: {
     project: './tsconfig.json',

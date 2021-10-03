@@ -16,6 +16,7 @@ module.exports = {
     es6: true,
   },
   rules: {
+    'func-names': 0,
     'no-debugger': 2,
     'no-alert': 1,
     'no-return-assign': ['error', 'except-parens'],
@@ -112,15 +113,5 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/comma-dangle': ['off'],
-    // note you must disable the base rule as it can report incorrect errors
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      2,
-      {
-        classes: false,
-        functions: false,
-      },
-    ],
-    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
 };
